@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../scripts/vendors/angular.min.js" charset="utf-8"></script>
+    <script src="../scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../views/styles.css">
+    <title>Tau Pets</title>
+  </head>
+  <body ng-app='myApp' id='main'>
+    <h1>Welcome to the Tau Petting Zoo!!!</h1>
+    <h2>Plese fill out the form with a pet you would like to bring to the Tau Peeting Zoo.</h2>
+    <h3>Make sure to include an image of your most treasured fur baby!!</h3>
+        <div ng-controller="PetController">
+            <input type="text" ng-model='petName' placeholder="Pet Name">
+            <input type="text" ng-model='animalType' placeholder="Animal Type">
+            <input type="number" ng-model='age' placeholder="Pet Age">
+            <input type="text" ng-model='imageUrl' placeholder="Pet Pic URL">
+            <button type="button" name="submit" ng-click='postPet()'>Enter New Pet</button>
+            <h2>Our Classes Beautiful Pets</h2>
+            <ul>
+              <li ng-repeat='pet in pets'>
+                Pet Name: {{pet.petName}}...... Type of Pet: {{pet.animalType}}.... Age of Pet: {{pet.age}}
+                  <img ng-src="{{pet.imageUrl}}" alt="Description">
+              </li>
+            </ul>
+
+        </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "pet_inventory-weekend_5",
+  "version": "1.0.0",
+  "description": "In this challenge, you will be creating a Pet Application that allows a user to create Pets records that are stored in a database. The list will be displayed on the DOM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "keywords": [],
+  "author": "Alex Collin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.6"
+  }
+}
