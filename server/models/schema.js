@@ -1,6 +1,7 @@
 var mongoose= require('mongoose');
 var Schema= mongoose.Schema;
 
+// the Schema in my database
 var petSchema= new Schema({
   petName: String,
   animalType: String,

@@ -5,12 +5,20 @@
     <script src="../scripts/vendors/angular.min.js" charset="utf-8"></script>
     <script src="../scripts/client.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../views/styles.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>Tau Pets</title>
   </head>
   <body ng-app='myApp' id='main'>
-    <h1>Welcome to the Tau Petting Zoo!!!</h1>
-    <h2>Plese fill out the form with a pet you would like to bring to the Tau Peeting Zoo.</h2>
-    <h3>Make sure to include an image of your most treasured fur baby!!</h3>
+    <h3>Welcome to the Tau Petting Zoo!!!</h3>
+    <h4>Plese fill out the form with a pet you would like to bring to the Tau Peeting Zoo.</h4>
+    <h5>Make sure to include an image of your most treasured fur baby!!</h5>
         <div ng-controller="PetController">
             <input type="text" ng-model='petName' placeholder="Pet Name">
             <input type="text" ng-model='animalType' placeholder="Animal Type">
@@ -18,12 +26,11 @@
             <input type="text" ng-model='imageUrl' placeholder="Pet Pic URL">
             <button type="button" name="submit" ng-click='postPet()'>Enter New Pet</button>
             <h2>Our Classes Beautiful Pets</h2>
-            <ul>
-              <li ng-repeat='pet in pets'>
+              <p ng-repeat='pet in pets'>
                 Pet Name: {{pet.petName}}...... Type of Pet: {{pet.animalType}}.... Age of Pet: {{pet.age}}
-                  <img ng-src="{{pet.imageUrl}}" alt="Description">
-              </li>
-            </ul>
+                <img ng-src="{{pet.imageUrl}}" alt="Description" class="img-responsive">
+              </p>
+
 
         </div>
   </body>
